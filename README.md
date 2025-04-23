@@ -65,10 +65,6 @@ Reporting the oldest mission keeps rescue teams informed of survivor status. It 
   - Doubly Linked List
   - Circular Linked List
 
-## How to Run
-
-You can implement each module separately in C or any other language. Simulate the behavior using basic insert/delete operations, and use print statements to visualize traversal or state changes.
-
 ## Author
 
 - **Name:** Shruthi Pullela  
