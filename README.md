@@ -67,6 +67,6 @@ Reporting the oldest mission keeps rescue teams informed of survivor status. It 
 
 ## Author
 
-- **Name:** Shruthi Pullela  
+- **Name:** Venkata Shruthi Pullela  
 - **Roll Number:** ME24B1064    
 - **Batch:** 5  
