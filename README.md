@@ -1,76 +1,76 @@
-# AssignmentEDSA
-Elementary Data Structures and Algorithms Assignment by Shruthi Pullela
+# Earthquake Rescue Robot Coordinator – CS Assignment
 
-Assignment Question 8: Earthquake Rescue Robot Coordinator  
+**Course:** Elementary Data Structures and Algorithms  
+**Assignment Question 8**
 
-Scenario: You’re designing an Earthquake Rescue Robot Coordinator to deploy robots (e.g., "Scanner", "Digger", "Lift", "Light", "Drone") for disaster relief. The system uses: 
+## Overview
 
-Mission Request System (Queue): Rescue tasks queue up from survivors. 
+This project simulates a disaster relief coordination system using core data structures like **queues, stacks, arrays, singly/doubly/circular linked lists**. Robots are assigned to missions, tracked for damage and repair, and redeployed based on urgency.
 
-Urgent Task Handler (Stack): Critical tasks stack in LIFO order for immediate action. 
+## Structure
 
-Rescue Log Unit (Array): Completed missions log into an array-based base (size: 6 slots). If full, the oldest is reported. 
+### a) Mission and Urgency — Queue + Stack
 
-Repair Tracker (Linked Lists): 
+- **Queue** simulates mission requests from survivors.
+- **Stack** manages urgent tasks in **LIFO** order.
+- Six tasks: `Scanner`, `Digger`, `Lift`, `Light`, `Drone`, `Cutter`.
+- Tasks are enqueued, dequeued, and pushed to the stack.
+- Stack is popped to determine the order of execution.
 
-Damaged robots go to a singly linked list. 
+#### Creativity Bonus 💡
+LIFO works best in urgency. If "Cutter" is stacked last, it's accessed first to clear debris, giving way to other robots. This priority ensures faster access to trapped survivors.
 
-Repaired robots move to a doubly linked list for inspection. 
+---
 
-High-priority robots cycle in a circular linked list for urgent redeployment. 
+### b) Rescue Log Unit — Fixed Array
 
-Objective: Simulate rescue mission coordination, logging, and robot repair. 
+- Uses a **fixed-size array** (size 6) for mission logging.
+- Inserts 8 missions (`Mis1` to `Mis8`) to simulate overflow.
+- When full, the system reports the oldest logged mission.
 
-Tasks:[Text Wrapping Break] 
+#### Creativity Bonus 💡
+Reporting the oldest mission keeps rescue teams informed of survivor status. It ensures no mission goes unreported due to memory constraints.
 
-a) Mission and Urgency  
+---
 
-Simulate 6 tasks (e.g., "Scanner", "Digger", "Lift", "Light", "Drone", "Cutter") arriving in a queue. 
+### c) Damaged Robot Tracker — Linked Lists
 
-Stack urgent tasks in LIFO order. Write pseudocode or an algorithm to: 
+- **Singly Linked List** for damaged robots: `Digger`, `Drone`.
+- `Digger` is repaired and moved to a **Doubly Linked List** for inspection.
+- Forward and backward traversal ensures maintenance quality.
 
-Enqueue all 6 tasks. 
+#### Creativity Bonus 💡
+`Digger` suffered a crushed arm due to a collapsed tunnel. Techs replaced the joint hydraulics and tested movement in reverse to validate symmetry.
 
-Dequeue and push onto a stack. 
+---
 
-Pop to show action order. 
+### d) Priority Redeployment — Circular Linked List
 
-Creativity Bonus: Describe (in 2-3 sentences) why LIFO fits (e.g., "Cutter" last to clear debris safely). 
+- **Circular Linked List** manages `Scanner` and `Lift` for fast redeployment.
+- Traversed twice to simulate continuous operation in loops.
 
-b) Rescue Log Unit  
+#### Creativity Bonus 💡
+`Lift` is upgraded with a thermal camera to detect survivor body heat in rubble. `Scanner` syncs with it to plan pathfinding in zero visibility.
 
-Log missions in a 6-slot array. 
+---
 
-Simulate logging 8 missions (e.g., "Mis1", "Mis2", ..., "Mis8"). If full, report the oldest. Write pseudocode or an algorithm to: 
+## Technologies
 
-Insert the first 6 missions. 
+- **Language:** C (or Pseudocode-based simulation)
+- **Data Structures Used:**
+  - Queue
+  - Stack
+  - Fixed Array
+  - Singly Linked List
+  - Doubly Linked List
+  - Circular Linked List
 
-Handle overflow for "Mis7" and "Mis8". 
+## How to Run
 
-Creativity Bonus: Suggest (in 2-3 sentences) a reason for reporting (e.g., survivor status updates). 
+You can implement each module separately in C or any other language. Simulate the behavior using basic insert/delete operations, and use print statements to visualize traversal or state changes.
 
-c) Damaged Robot Tracker  
+## Author
 
-"Digger" and "Drone" are damaged. Add to a singly linked list. 
-
-Move "Digger" to a doubly linked list post-repair. Write pseudocode or an algorithm to: 
-
-Insert "Digger" and "Drone". 
-
-Delete "Digger" and insert it into the doubly linked list. 
-
-Traverse forward and backward. 
-
-Creativity Bonus: Propose (in 2-3 sentences) a damage and fix (e.g., "Digger’s arm crushed, rebuilt by techs"). 
-
-d) Priority Redeployment  
-
-"Scanner" and "Lift" need urgent redeployment (e.g., trapped survivors). Add to a circular linked list. Write pseudocode or an algorithm to: 
-
-Insert "Scanner" and "Lift". 
-
-Traverse twice. 
-
-Creativity Bonus: Invent (in 2-3 sentences) a redeployment tweak (e.g., "Lift gets a thermal camera"). 
-
- 
+- **Name:** Shruthi Pullela  
+- **Roll Number:** ME24B1065  
+- **Batch:** 5  
