@@ -72,5 +72,5 @@ You can implement each module separately in C or any other language. Simulate th
 ## Author
 
 - **Name:** Shruthi Pullela  
-- **Roll Number:** ME24B1065  
+- **Roll Number:** ME24B1064    
 - **Batch:** 5  
